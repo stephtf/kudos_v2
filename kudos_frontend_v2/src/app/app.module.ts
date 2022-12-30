@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { KudosComponent } from './kudos/kudos.component';
 import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
+import { ImageUploadComponent } from './image-upload/image-upload.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HomeComponent } from './home/home.component';
     HomeComponent,
     NavbarComponent,
     KudosComponent,
-    UserComponent
+    UserComponent,
+    ImageUploadComponent
   ],
   imports: [
     BrowserModule,
