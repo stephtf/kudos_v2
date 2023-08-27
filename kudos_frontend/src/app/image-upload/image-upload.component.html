@@ -1,0 +1,9 @@
+<div class="upload-container">
+    <div class="input-group photo-group" style="border:none"> 
+        <input class="form-control" type="file" accept="image/*" (input)="handleImageInput($event)" id="imageName" style="display: none"/>
+        <label for="imageName" class="btn btn-dark m-0 add-photo-btn rounded">Add Photo</label>       
+        <p class="form-control m-0">{{ imageName }}</p>
+        <button class="btn purple-button" type="button" (click)="sendImage()">Upload</button>
+    </div>
+        <small class="upload-progress ">{{ barWidth }} completed</small>  
+</div>

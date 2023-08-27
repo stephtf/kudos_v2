@@ -1,0 +1,59 @@
+<div class="container box-width">
+  <div class="card kudo-box">
+      <div class="card-body kudo-inner-box">
+          <form className="form-group new-post-container mb-4">
+              <textarea type="text" class="form-control kudo-text" rows="4" (input)="onUpdate($event)" placeholder="Good vibes go here"></textarea>
+          <image-upload (imageEvent)="receiveImage($event)"></image-upload>
+          <div class="m-0">
+              <button class="btn purple-button w-100" (click)="newKudoPost()">Post New Kudo</button>
+              <a><button>changing the new button</button></a>
+              <a><button>new button #2</button></a>
+              <a><button>new button #3</button></a>
+          </div>
+          </form>
+      </div>
+  </div>
+  </div>
+  
+  <div class="container box-width" >
+  <div class="card kudo-box" *ngFor="let kudo of kudos">
+      <div class="card-body kudo-inner-box">
+          <div class="delete-x form-group">
+              <span class="edit-buttons" [ngClass]="{hide: edit === kudo.id}" type="button" (click)="editKudo(kudo._id)">edit</span>
+              <span class="edit-buttons" type="submit" (click)="deleteKudo(kudo.id)">x</span>
+          </div>
+  <!-- boxes for individual kudos; hidden when edit button is clicked -->
+          <div class="kudo-column" [ngClass]="edit === kudo.id ? 'hide' : 'show'">
+              <img src={{kudo.img_url}} alt="" [ngClass]="{'hide': kudo.img_url === ''}">
+              <li class="list-group-item" [ngClass]="{'hide': kudo.text === ''}">{{ kudo.text }}</li>
+              <hr>
+          </div>
+  <!-- edit kudo options; hidden until edit button is clicked -->
+          <form class="" [ngClass]="edit === kudo.id ? 'show' : 'hide'">
+              <div className="form-group mb-4">
+                  <textarea type="text" class="form-control kudo-text" rows="4" (input)="onUpdate($event)" [textContent]="kudo.text" placeholder="{{!kudo.text ? 'Add some text' : ''}}" ></textarea>
+              <!-- <h6>Upload a new photo?</h6>
+              <image-upload (imageEvent)="receiveImage($event)"></image-upload>
+              <div class="m-0">
+                  <button class="btn light-purple-button w-100" (click)="updateKudo(kudo._id)">Update Kudo</button>
+                  <button class="btn btn-dark" type="button" (click)="showHide()">Cancel</button>
+              </div> -->
+          </div>
+      </form>
+      </div>
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  <!-- <div class="mt-4">
+  <form class="form-group" >
+      <input type="text" class="form-control">
+      <button class='btn btn-info' (submit)="updateKudo(kudoData)">submit update</button>
+  </form>
+  </div> -->
+  
+  

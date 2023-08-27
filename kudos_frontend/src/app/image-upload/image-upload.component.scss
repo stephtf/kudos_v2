@@ -1,0 +1,29 @@
+.photo-group {
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin: 0px;
+}
+
+.upload-progress {
+  font-size: 10px;
+  display: flex;
+  justify-content: right;
+  margin: 0px;
+}
+
+.add-photo-btn {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+img {
+  width: 300px;
+}
+
+.upload-container {
+  margin: 0px;
+}
+
+// .bar {
+//     background-color: hotpink;
+// }

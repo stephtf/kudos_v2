@@ -1,0 +1,112 @@
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex; 
+}
+
+img {
+  width: 200px;
+}
+
+.hide {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.box-width {
+  max-width: 800px;
+}
+
+.kudo-text {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  overflow: auto;
+  border-color: transparent;
+  // remove glow on click
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  caret-color: #5E17EB;
+  font-size: 25px;
+}
+
+// change placeholder font color / size 
+  textarea::-webkit-input-placeholder {
+      color: rgb(186, 155, 186);
+  }
+  
+  textarea:-moz-placeholder { /* Firefox 18- */
+      color: rgb(186, 155, 186);
+  }
+  
+  textarea::-moz-placeholder {  /* Firefox 19+ */
+      color: rgb(186, 155, 186);
+  }
+  
+  textarea:-ms-input-placeholder {
+      color:rgb(186, 155, 186);
+  }
+
+.kudo-column {
+  display: flex; 
+  flex-direction: column;
+}
+
+.kudo-box {
+  border: none;
+  height: 100%;
+}
+
+.kudo-inner-box {
+  background-color: rgb(247, 246, 249);
+  padding: 30px;
+  margin: 30px 20px 0px 20px;
+  border-radius: 8px;
+}
+
+.edit-buttons {
+  margin: 0px 0px 0px 15px;
+}
+
+.delete-x {
+  color: rgb(182, 188, 188);
+  margin: 5px 12px 5px 0px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align-last: right;
+}
+
+.delete-x:hover {
+  color: #5E17EB;
+}
+
+// .kudo-inner-box:hover {
+//     .delete-x {
+//         margin: 5px 10px 0px 0px;
+//         font-weight: bold;
+//         text-align-last: right;
+//     }
+// }
+
+h5 {
+  margin-bottom: 0px;
+}
+
+// .edit-kudo {
+//     width: 600px;
+// }
+
+.light-purple-button {
+  background-color: #ae8bf4;
+  
+}
+
+.light-purple-button:hover {
+  color: rgb(89, 87, 87);
+}

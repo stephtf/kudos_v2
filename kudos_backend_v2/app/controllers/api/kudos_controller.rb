@@ -1,6 +1,11 @@
 class Api::KudosController < ApplicationController
   def index
-    kudos = Kudo.all()
+    kudos = Kudo.all
+    render json:kudos, status: 200
+  end
+
+  def kudos_by_user_id
+    kudos = Kudo.all
     render json:kudos, status: 200
   end
 
@@ -19,7 +24,7 @@ class Api::KudosController < ApplicationController
 
   def create 
     kudo = Kudo.new(kudo_params)
-    if kudo.save 
+    if kudo.save! 
       render json:kudo, status: 200
     else
       render json: { error: "Error creating kudo"}
